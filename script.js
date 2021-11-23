@@ -11,7 +11,7 @@ rightBtn.addEventListener('click', () => {
         activeSlide = 0
     }
     setActiveSlide()
-    console.log(activeSlide)
+    setBgToBody()
 })
 
 leftBtn.addEventListener('click', () => {
@@ -20,7 +20,7 @@ leftBtn.addEventListener('click', () => {
         activeSlide = slides.length - 1
     }
     setActiveSlide()
-    console.log(activeSlide)
+    setBgToBody()
 })
 
 
@@ -30,6 +30,8 @@ function setActiveSlide() {
     slides[activeSlide].classList.add('active')
 }
 
-function setBgBody() {
-    body.style.backgroundImage = slides[activeSlide]
+setBgToBody()
+
+function setBgToBody() {
+    body.style.backgroundImage = slides[activeSlide].style.backgroundImage
 }
