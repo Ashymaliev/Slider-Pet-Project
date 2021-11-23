@@ -29,3 +29,7 @@ function setActiveSlide() {
 
     slides[activeSlide].classList.add('active')
 }
+
+function setBgBody() {
+    body.style.backgroundImage = slides[activeSlide]
+}
